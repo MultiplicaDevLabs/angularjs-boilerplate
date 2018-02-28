@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"> <i class="fa fa-search" aria-hidden="true"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" ng-model="$ctrl.searchTerm">
+                <div class="input-group-append">
+                    <button class="btn btn-ligth" type="button" ng-click="$ctrl.search()">Seach</button>
+                </div>
+            </div>
+    </div>
+    <div class="row" >
+        <ul class="list-unstyled bg-white text-dark">
+            <li class="media" ng-class="{'my-4':$middle}" ng-repeat="repo in $ctrl.results">
+              <img class="mr-3 thumbnail" ng-src="{{repo.owner.avatar_url}}" alt="Generic placeholder image">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">{{repo.full_name}}</h5>
+                {{repo.description}}
+              </div>
+            </li>
+        </ul>
+    </div>
+</div>
