@@ -1,13 +1,13 @@
-const AppDirective = () => {
-    return {
-      template: require('../views/app.html'),
-      controller: 'AppCtrl',
-      controllerAs: '$ctrl',
-      url:''
-    }
-};
+import app from '../views/app.html';
+
+const AppDirective = () => ({
+  template: app,
+  controller: 'AppCtrl',
+  controllerAs: '$ctrl',
+  url: '',
+});
 
 class AppCtrl {
 
 }
-export {AppCtrl,AppDirective}
+export { AppCtrl, AppDirective };

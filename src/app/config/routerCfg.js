@@ -1,9 +1,9 @@
-import {SearchDirective} from '../controller/searchCtrl'
-import {AppDirective} from '../controller/appCtrl'
+import { SearchDirective } from '../controller/searchCtrl';
+import { AppDirective } from '../controller/appCtrl';
 
-const RouterConfig = ($stateProvider, $urlRouterProvider) => {
-    $stateProvider
+export default ($stateProvider) => {
+  $stateProvider
     .state('search', SearchDirective())
-    .state('app', AppDirective())
+    .state('app', AppDirective());
 };
-export {RouterConfig}
+

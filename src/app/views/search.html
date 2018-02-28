@@ -11,13 +11,13 @@
             </div>
     </div>
     <div class="row" >
-        <ul class="list-unstyled bg-white text-dark">
-            <li class="media" ng-class="{'my-4':$middle}" ng-repeat="repo in $ctrl.results">
-              <img class="mr-3 thumbnail" ng-src="{{repo.owner.avatar_url}}" alt="Generic placeholder image">
-              <div class="media-body">
-                <h5 class="mt-0 mb-1">{{repo.full_name}}</h5>
-                {{repo.description}}
-              </div>
+        <ul class="list-unstyled" >
+            <li class="media clickable" ng-class="{'my-4':$middle}" ng-repeat="repo in $ctrl.results" ng-click="$ctrl.open(repo.html_url)">                
+                <img class="mr-3 thumbnail" ng-src="{{repo.owner.avatar_url}}" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">{{repo.full_name}}</h5>
+                    {{repo.description}}
+                </div>                
             </li>
         </ul>
     </div>
